@@ -14,12 +14,38 @@
   padding-inline: 1.5rem;
 }
 
+@layer base {
+  h1 {
+    @apply text-5xl font-bold;
+  }
+
+  h2 {
+    @apply text-4xl font-bold;
+  }
+
+  h3 {
+    @apply text-3xl font-semibold;
+  }
+
+  h4 {
+    @apply text-2xl font-medium;
+  }
+
+  h5 {
+    @apply text-xl font-medium;
+  }
+}
+
 @layer components {
   .button {
-    @apply bg-primary rounded-3xl text-primary-bg py-2 px-6;
+    @apply font-semibold bg-primary rounded-3xl text-primary-bg py-2 px-6;
   }
 
   .btn-secondary {
     @apply bg-secondary text-primary-text;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border-2 text-primary border-primary;
   }
 }

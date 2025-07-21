@@ -17,5 +17,75 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="my-8 flex items-center justify-between">
+        <a href=""
+          ><img src="./src/img/logo2.png" alt="icon" class="w-[142px]"
+        /></a>
+        <ul class="flex gap-4 font-semibold">
+          <li><a href="" class="nav-link">Home</a></li>
+          <li><a href="" class="nav-link">Explore</a></li>
+          <li><a href="" class="nav-link">About</a></li>
+        </ul>
+        <a href="./login.html" class="button btn-secondary"
+          ><i class="far fa-user-circle"></i> Login</a
+        >
+      </div>
+      <div class="flex items-center min-h-[80vh] justify-between gap-4">
+        <div
+          class="self-stretch rounded-2xl w-5/12 bg-[url(../img/building.jpg)] bg-top bg-cover"
+        ></div>
+        <div class="flex flex-col justify-center px-[100px] w-7/12">
+          <div class="flex justify-between items-center mb-3">
+            <h1>Login</h1>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+          <p class="">Sign in with open account</p>
+          <div
+            class="grid grid-cols-2 gap-2 *:rounded-xl text-center text-sm my-2"
+          >
+            <a href="" class="button"
+              ><i class="fa-brands fa-google"></i> Google</a
+            >
+            <a href="" class="button"
+              ><i class="fa-brands fa-apple"></i> Apple ID</a
+            >
+          </div>
+          <p class="text-xs font-normal mb-2">Or continue with email address</p>
+          <form action="./dashboard.html" method="post">
+            <div class="grid grid-rows-3 mb-16">
+              <div class="button flex rounded-xl px-4 text-xs font-normal mb-2">
+                <span class="me-3 flex-none"
+                  ><i class="fa-regular fa-envelope"></i></span
+                ><input
+                  type="email"
+                  name=""
+                  id=""
+                  placeholder="Email"
+                  class="flex-1"
+                />
+              </div>
+              <div class="button flex rounded-xl px-4 text-xs font-normal mb-2">
+                <span class="me-3 flex-none"
+                  ><img src="./src/img/lock.svg" alt="" /></span
+                ><input
+                  type="password"
+                  name=""
+                  id=""
+                  placeholder="Password"
+                  class="flex-1"
+                />
+              </div>
+              <button class="button btn-accent text-sm">Let's go!</button>
+            </div>
+          </form>
+          <p class="text-xs font-normal">
+            Don't have an account? <strong><a href="">Sign Up</a></strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

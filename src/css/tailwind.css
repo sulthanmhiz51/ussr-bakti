@@ -12,6 +12,7 @@
 @utility container {
   margin-inline: auto;
   padding-inline: 1.5rem;
+  width: 90%;
 }
 
 @layer base {
@@ -43,6 +44,10 @@
 
   .btn-secondary {
     @apply bg-secondary text-primary-text hover:bg-primary hover:text-primary-bg;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-primary-text hover:font-bold;
   }
 
   .btn-outline {

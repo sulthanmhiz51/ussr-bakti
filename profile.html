@@ -13,6 +13,7 @@
       rel="stylesheet"
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./src/js/script.js"></script>
     <script
       src="https://kit.fontawesome.com/0615fd1ed1.js"
       crossorigin="anonymous"
@@ -31,7 +32,8 @@
           <li><a href="./about.html" class="nav-link">About</a></li>
         </ul>
         <div class="w-80 flex items-center gap-6">
-          <div
+          <a
+            href="./profile.html"
             class="flex-auto flex items-center gap-2 py-2 px-3 bg-secondary rounded-xl"
           >
             <img
@@ -43,7 +45,7 @@
               <p>USSR22</p>
             </div>
             <p class="font-normal text-xs flex-none">Points: 1500</p>
-          </div>
+          </a>
           <a
             href="./index.html"
             class="flex-none bg-[#C52222] px-2 py-1 rounded-sm text-primary-bg"
@@ -67,32 +69,16 @@
             </div>
           </div>
           <div
-            class="flex gap-2 *:flex *:flex-col *:items-center *:justify-center *:bg-primary *:rounded-xl *:w-24 *:h-24 text-secondary text-xs font-normal"
+            class="w-70 flex items-center justify-between px-3.5 py-3 bg-primary rounded-xl text-secondary text-sm font-normal"
           >
-            <div>
-              <img
-                src="./src/img/star.svg"
-                alt=""
-                class="w-[50px] h-[50px] mb-2"
-              />
+            <div class="flex items-center gap-2">
+              <img src="./src/img/star.svg" alt="" class="w-[50px] h-[50px]" />
               <p>Points: 1500</p>
             </div>
-            <div>
-              <img
-                src="./src/img/history.svg"
-                alt=""
-                class="w-[50px] h-[50px] mb-2"
-              />
-              <p>Works: 25</p>
-            </div>
-            <div>
-              <img
-                src="./src/img/percent.svg"
-                alt=""
-                class="w-[50px] h-[50px] mb-2"
-              />
-              <p>Rate: 100%</p>
-            </div>
+            <button class="badge-accent rounded-md cursor-pointer flex gap-2">
+              <img src="./src/img/duit.svg" alt="" />
+              Cash out
+            </button>
           </div>
         </div>
         <div class="flex items-center justify-between">

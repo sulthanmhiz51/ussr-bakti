@@ -232,11 +232,17 @@
   .me-3 {
     margin-inline-end: calc(var(--spacing) * 3);
   }
+  .mb-1 {
+    margin-bottom: calc(var(--spacing) * 1);
+  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
   }
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
@@ -373,8 +379,14 @@
   .border-collapse {
     border-collapse: collapse;
   }
+  .rotate-180 {
+    rotate: 180deg;
+  }
   .rotate-315 {
     rotate: 315deg;
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .resize {
     resize: both;
@@ -446,6 +458,12 @@
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
+  }
+  .border-\[\#606262\] {
+    border-color: #606262;
+  }
+  .border-\[\#ff0000\] {
+    border-color: #ff0000;
   }
   .border-secondary {
     border-color: var(--color-secondary);
@@ -522,6 +540,9 @@
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
+  .px-9 {
+    padding-inline: calc(var(--spacing) * 9);
+  }
   .px-12 {
     padding-inline: calc(var(--spacing) * 12);
   }
@@ -539,6 +560,9 @@
   }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
+  }
+  .py-7 {
+    padding-block: calc(var(--spacing) * 7);
   }
   .py-12 {
     padding-block: calc(var(--spacing) * 12);
@@ -599,6 +623,11 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .\*\:w-full {
+    :is(& > *) {
+      width: 100%;
+    }
+  }
   .\*\:rounded-2xl {
     :is(& > *) {
       border-radius: var(--radius-2xl);
@@ -609,14 +638,46 @@
       border-radius: var(--radius-xl);
     }
   }
+  .\*\:px-5 {
+    :is(& > *) {
+      padding-inline: calc(var(--spacing) * 5);
+    }
+  }
   .\*\:px-9 {
     :is(& > *) {
       padding-inline: calc(var(--spacing) * 9);
     }
   }
+  .\*\:py-3 {
+    :is(& > *) {
+      padding-block: calc(var(--spacing) * 3);
+    }
+  }
   .\*\:py-7 {
     :is(& > *) {
       padding-block: calc(var(--spacing) * 7);
+    }
+  }
+  .hover\:bg-primary-text {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-primary-text);
+      }
+    }
+  }
+  .hover\:font-semibold {
+    &:hover {
+      @media (hover: hover) {
+        --tw-font-weight: var(--font-weight-semibold);
+        font-weight: var(--font-weight-semibold);
+      }
+    }
+  }
+  .hover\:text-secondary {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-secondary);
+      }
     }
   }
   .xl\:flex-row {

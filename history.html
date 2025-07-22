@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="bg-primary-bg text-primary-text font-poppins font-medium">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bakti | See the problem. Be the solution</title>
+    <link rel="icon" href="./src/img/favicon.png" />
+    <link href="./src/css/main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0615fd1ed1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="my-8 flex items-center justify-between">
+        <a href="./dashboard.html"
+          ><img src="./src/img/logo2.png" alt="icon" class="w-[142px]"
+        /></a>
+        <ul class="flex gap-4 font-semibold">
+          <li><a href="./dashboard.html" class="nav-link">Home</a></li>
+          <li><a href="./explore.html" class="nav-link">Explore</a></li>
+          <li><a href="./about.html" class="nav-link">About</a></li>
+        </ul>
+        <div class="w-80 flex items-center gap-6">
+          <div
+            class="flex-auto flex items-center gap-2 py-2 px-3 bg-secondary rounded-xl"
+          >
+            <img
+              src="./src/img/perry.jpg"
+              alt=""
+              class="h-10 w-10 object-cover flex-none rounded-[50%]"
+            />
+            <div class="flex-auto">
+              <p>USSR22</p>
+            </div>
+            <p class="font-normal text-xs flex-none">Points: 1500</p>
+          </div>
+          <a
+            href=""
+            class="flex-none bg-[#C52222] px-2 py-1 rounded-sm text-primary-bg"
+            ><i class="fa-solid fa-arrow-right-from-bracket"></i
+          ></a>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-start gap-8 my-4 px-9 py-7 bg-secondary rounded-2xl *:w-full"
+      >
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <img
+              src="./src/img/perry.jpg"
+              alt=""
+              class="w-20 h-20 object-cover rounded-xl"
+            />
+            <div>
+              <h3>USSR22</h3>
+              <p class="font-normal text-sm">&#x25CF; Online</p>
+            </div>
+          </div>
+          <div
+            class="flex gap-2 *:flex *:flex-col *:items-center *:justify-center *:bg-primary *:rounded-xl *:w-24 *:h-24 text-secondary text-xs font-normal"
+          >
+            <div>
+              <img
+                src="./src/img/star.svg"
+                alt=""
+                class="w-[50px] h-[50px] mb-2"
+              />
+              <p>Points: 1500</p>
+            </div>
+            <div>
+              <img
+                src="./src/img/history.svg"
+                alt=""
+                class="w-[50px] h-[50px] mb-2"
+              />
+              <p>Works: 25</p>
+            </div>
+            <div>
+              <img
+                src="./src/img/percent.svg"
+                alt=""
+                class="w-[50px] h-[50px] mb-2"
+              />
+              <p>Rate: 100%</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <div class="flex gap-2 *:rounded-xl">
+            <button id="history-btn" class="button">Work History</button>
+            <button id="current-btn" class="button btn-outline">
+              Current Work
+            </button>
+          </div>
+          <button class="w-9 h-9 cursor-pointer bg-accent rounded-lg">
+            <img src="./src/img/sort.svg" alt="" class="m-auto" />
+          </button>
+        </div>
+        <div id="content"></div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        var content = $("#content");
+        var historyBtn = $("#history-btn");
+        var currentBtn = $("#current-btn");
+
+        $.get("./history-cards.html", function (data) {
+          content.html(data);
+        });
+
+        historyBtn.on("click", function () {
+          historyBtn.removeClass("btn-outline");
+          currentBtn.addClass("btn-outline");
+          $.get("./history-cards.html", function (data) {
+            content.html(data);
+          });
+        });
+
+        currentBtn.on("click", function () {
+          currentBtn.removeClass("btn-outline");
+          historyBtn.addClass("btn-outline");
+          $.get("./current-cards.html", function (data) {
+            content.html(data);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

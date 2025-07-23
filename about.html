@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakti - Tentang Kami</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="./src/css/about.css" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+</head>
+<body class="bg-brand-gray-light font-sans text-gray-800">
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Bagian Navigasi -->
+        <header class="py-6">
+            <nav class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <svg class="h-8 w-8 text-brand-teal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 0 1 9 14.437V9.564Z" />
+                    </svg>
+                    <span class="font-bold text-2xl">bakti</span>
+                </div>
+
+                <!-- Tautan Navigasi -->
+                <ul class="hidden md:flex items-center space-x-8">
+                    <li><a href="#" class="text-gray-600 hover:text-brand-teal transition-colors">Home</a></li>
+                    <li><a href="#" class="bg-brand-teal text-white px-4 py-2 rounded-full font-semibold">About</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-brand-teal transition-colors">Explore</a></li>
+                </ul>
+
+                <!-- Profil Pengguna -->
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2 border rounded-full p-1 pr-3">
+                        <img src="https://placehold.co/32x32/e9ecef/333?text=U" alt="Avatar Pengguna" class="w-8 h-8 rounded-full">
+                        <div class="text-sm">
+                            <div class="font-semibold">U5SR22</div>
+                            <div class="text-xs text-gray-500">Points: 1500</div>
+                        </div>
+                    </div>
+                    <button class="bg-brand-red text-white p-2 rounded-full hover:bg-red-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="mt-12 md:mt-20">
+            <!-- Bagian Hero -->
+            <section class="grid md:grid-cols-2 gap-[50px] items-center">
+                <div class="space-y-4">
+                    <h1 class="text-4xl md:text-5xl max-w-[500px] font-bold leading-tight">
+                        <span class="block text-brand-teal-dark">Bakti untuk sesama</span>
+                        <span class="block text-brand-teal mt-6">dan lingkungan</span>
+                    </h1>
+                </div>
+                <div>
+                    <p class="text-[18px] text-brand-teal-dark leading-relaxed max-w-[730px] break-words">
+                        Bakti untuk sesama dan lingkungan bukan sekadar slogan, tapi arah dari setiap aksi yang kami dukung. Mulai dari membantu individu yang membutuhkan, hingga menjaga kelestarian alam. Semua berangkat dari niat baik dan dikerjakan bersama.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Bagian Grid Konten -->
+            <section class="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-12 gap-y-5 md:gap-y-5 gap-x-5">
+                <!-- Baris pertama -->
+                <!-- Kolaborasi -->
+                <div class="md:col-span-4 w-full h-[271px] pt-12 pb-5 px-6 bg-[#E9EEEE] rounded-[15px] flex flex-col justify-start items-center gap-2.5">
+                    <div class="w-[54px] h-[50px] flex items-center justify-center mb-4">
+                        <img src="./src/img/jempol.svg" alt="icon jempol" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full text-center text-[#062C30] text-[28px] font-poppins font-semibold break-words">
+                        Collaboration
+                    </div>
+                    <div class="w-full text-center text-[#062C30] text-[18px] font-poppins font-medium break-words">
+                        Solve problems together
+                    </div>
+                </div>
+                <!-- Gambar Jempol -->
+                <div class="md:col-span-8 w-full h-[271px] rounded-2xl overflow-hidden flex items-center justify-center">
+                    <img src="./src/img/jempolgede.jpg" alt="Seseorang memberikan jempol" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Baris kedua -->
+                <!-- Grid 1 (Baris kedua) -->
+                <div class="md:col-span-4 h-[209px] pt-[50px] pb-5 px-[25px] rounded-[15px] flex flex-col justify-start items-center gap-[10px] overflow-hidden">
+                    <img src="./src/img/Layer_x0020_1.svg" alt="Gambar grid pertama baris kedua" class="object-cover rounded-[10px]" style="width:227.72px; height:107.73px;">
+                </div>
+                <!-- Grid 2 (Responsibility) -->
+                <div class="md:col-span-4 h-[209px] pt-[50px] pb-5 px-[25px] bg-[#05595B] rounded-[15px] flex flex-col justify-start items-center gap-[10px]">
+                    <img src="./src/img/tastangan.svg" alt="Deskripsi gambar" class="w-[50px] h-[50px]">
+                    <div class="w-full text-center text-[#E9EEEE] text-[28px] font-poppins font-semibold break-words">
+                        Responsibility
+                    </div>
+                    <div class="w-full text-center text-[#E9EEEE] text-[18px] font-poppins break-words">
+                        Care for people and the environment
+                    </div>
+                </div>
+                <!-- Grid 3 (Empowerment) -->
+                <div class="md:col-span-4 h-[209px] pt-[50px] pb-5 px-[25px] bg-[#E9EEEE] rounded-[15px] flex flex-col justify-start items-center gap-[10px]">
+                    <img src="./src/img/tanganotot.svg" alt="Deskripsi gambar" class="w-[50px] h-[50px]">
+                    <div class="w-full text-center text-[#062C30] text-[28px] font-poppins font-semibold break-words">
+                        Empowerment
+                    </div>
+                    <div class="w-full text-center text-[#062C30] text-[18px] font-poppins font-medium break-words">
+                        Give voice to everyone
+                    </div>
+                </div>
+
+                <!-- Baris ketiga -->
+                <!-- Grid 1: Gambar -->
+                <div class="md:col-span-6 h-[221px] overflow-hidden rounded-[15px] flex items-stretch justify-end">
+                    <img src="./src/img/salamtangan.jpg" alt="Aksi Nyata" class="w-full h-full object-cover rounded-[15px]">
+                </div>
+                <!-- Grid 2: Action -->
+                <div class="md:col-span-3 h-[221px]  pt-[50px] pb-5 px-[25px] bg-[#E2D784] rounded-[15px] flex flex-col justify-start items-center gap-[10px]">
+                    <div class="w-[50px] h-[50px] rounded-full">
+                        <img src="./src/img/action.svg" alt="Icon Aksi" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full text-center text-[#062C30] text-[28px] font-poppins font-semibold break-words">
+                        Action
+                    </div>
+                    <div class="w-full text-center text-[#062C30] text-[18px] font-poppins font-medium break-words">
+                        From reports to real impact
+                    </div>
+                </div>
+                <!-- Grid 3: Gambar di tengah -->
+                <div class="md:col-span-3 h-[221px] rounded-[15px] flex items-center justify-center">
+                    <img src="./src/img/arrow.png" alt="Arrow" class="max-w-[100%] max-h-[100%]">
+                </div>
+            </section>
+        </main>
+
+        <!-- Bagian Footer -->
+        <footer class="w-full px-[50px] py-[100px] flex flex-col md:flex-row justify-center items-center gap-[77px] bg-transparent">
+    <div class="text-center text-[#062C30] text-[48px] font-poppins font-bold">
+        Get in touch
+    </div>
+    <div class="flex flex-col justify-center items-start gap-[10px]">
+        <div class="text-[#062C30] text-[16px] font-poppins font-normal">
+            Address : Jalan Cibaduyut, Babarsari, Sleman, 000001
+        </div>
+        <div class="text-[#062C30] text-[16px] font-poppins font-normal">
+            Email : berbaktikepadasesama@gmail.com
+        </div>
+        <div class="text-[#062C30] text-[16px] font-poppins font-normal">
+            Phone : 081234567890
+        </div>
+    </div>
+</footer>
+    </div>
+
+</body>
+</html>

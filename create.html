@@ -1,97 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Define your problem</title>
-    <link href="./src/css/create.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body class="bg-custom-body text-gray-800 font-sans">
-
+    <link href="./src/css/create.css" rel="stylesheet" />
+    <link href="./src/css/main.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/0615fd1ed1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-custom-body text-gray-800 font-sans">
     <!-- Header / Navbar -->
-    <header class="bg-custom-body">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-bold text-2xl text-custom-teal">
-                bakti
+    <div class="container">
+      <!-- Header -->
+      <div class="my-8 flex items-center justify-between">
+        <a href="./dashboard.html"
+          ><img src="./src/img/logo2.png" alt="icon" class="w-[142px]"
+        /></a>
+        <ul class="flex gap-4 font-semibold">
+          <li><a href="./dashboard.html" class="nav-link button">Home</a></li>
+          <li><a href="./explore.html" class="nav-link">Explore</a></li>
+          <li><a href="./about.html" class="nav-link">About</a></li>
+        </ul>
+        <div class="w-80 flex items-center gap-6">
+          <a
+            href="./profile.html"
+            class="flex-auto flex items-center gap-2 py-2 px-3 bg-secondary rounded-xl"
+          >
+            <img
+              src="./src/img/perry.jpg"
+              alt=""
+              class="h-10 w-10 object-cover flex-none rounded-[50%]"
+            />
+            <div class="flex-auto">
+              <p>USSR22</p>
             </div>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#" class="px-4 py-2 text-white bg-custom-teal rounded-full font-semibold">Home</a>
-                <a href="#" class="text-gray-600 hover:text-custom-teal font-semibold">About</a>
-                <a href="#" class="text-gray-600 hover:text-custom-teal font-semibold">Explore</a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <div class="flex items-center space-x-2">
-                    <img class="w-10 h-10 rounded-full" src="https://placehold.co/40x40/555555/ffffff?text=U" alt="User Avatar">
-                    <span class="font-semibold">USSR22</span>
-                </div>
-                <div class="text-sm">
-                    <span class="font-semibold">Points:</span> 1500
-                </div>
-                <button class="w-9 h-9 flex items-center justify-center bg-red-500 hover:bg-red-600 text-white rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
-                </button>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Menu Create -->
-    <main class="container mx-auto px-6 py-8" style="max-width:954px; width:100%; height:auto;">
-        <div class="w-full" style="height:auto;">
-            <!-- "Define your problem" -->
-            <div class="bg-custom-container bg-custom-sky-blue p-8 rounded-xl shadow-sm border border-gray-200">
-                <h1 class="text-[48px] text-custom-teal-dark font-bold mb-2 ">Define your problem</h1>
-                <p class="text-custom-teal-dark text[18px] mb-6">And we'll do the rest</p>
-                
-                <div class="space-y-4">
-                    <input type="text" placeholder="Enter Title" class="w-full p-4 border border-custom-gray rounded-lg focus:ring-2 focus:ring-custom-teal focus:outline-none transition">
-                    <textarea placeholder="Enter text" rows="5" class="w-full p-4 border border-custom-gray rounded-lg focus:ring-2 focus:ring-custom-teal focus:outline-none transition"></textarea>
-                </div>
-            </div>
-
-            <!-- Alamat karo Tanggal -->
-            <div class="bg-custom-container bg-custom-sky-blue p-8 mt-6 rounded-xl shadow-sm border border-gray-200">
-                <div class="grid md:grid-cols-2 gap-8 items-end">
-                    <div>
-                        <label for="address" class="font-semibold mb-2 block">Address</label>
-                        <input type="text" id="address" placeholder="Enter text" class="w-full p-4 border border-custom-gray rounded-lg focus:ring-2 focus:ring-custom-teal focus:outline-none transition">
-                    </div>
-                    <div>
-                        <label for="date" class="font-semibold mb-2 block">Date</label>
-                        <button id="date" class="w-full flex justify-between items-center text-left p-4 bg-custom-teal text-white rounded-lg hover:bg-custom-teal-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-teal transition">
-                            <span>01 - 01 - 2025</span>
-                            <!-- Ikon Panah Bawah (SVG) -->
-                            <img src="src/img/arrow.svg" alt="Arrow Down" width="20" height="20" />
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Up Gambar -->
-            <div class="bg-custom-container bg-custom-sky-blue p-8 mt-6 rounded-xl shadow-sm border border-gray-200">
-                <div class="bg-custom-teal border-2 border-dashed border-teal-300 rounded-xl p-12 text-center">
-                    <div class="flex justify-center mb-4">
-                        <!-- icon Upload -->
-                        <img src="src/img/upload.svg" alt="Upload Icon" width="48" height="48" />
-                    </div>
-                    <p class="text-white text-lg font-semibold">Drag or drop an image</p>
-                    <button class="mt-4 bg-white/20 hover:bg-white/30 text-white font-semibold py-2 px-6 rounded-lg transition">
-                        Select file
-                    </button>
-                </div>
-            </div>
-
-            <!-- Tombol Buat -->
-            <div class="mt-8">
-                <button class="w-full bg-custom-yellow hover:bg-custom-yellow-dark text-gray-800 font-bold py-4 rounded-lg text-lg transition">
-                    Create
-                </button>
-            </div>
+            <p class="font-normal text-xs flex-none">Points: 1500</p>
+          </a>
+          <a
+            href="./index.html"
+            class="flex-none bg-[#C52222] px-2 py-1 rounded-sm text-primary-bg"
+            ><i class="fa-solid fa-arrow-right-from-bracket"></i
+          ></a>
         </div>
-    </main>
+      </div>
 
-</body>
+      <!-- Menu Create -->
+      <main
+        class="container mx-auto px-6 py-8"
+        style="max-width: 954px; width: 100%; height: auto"
+      >
+        <div class="w-full" style="height: auto">
+          <!-- "Define your problem" -->
+          <div
+            class="bg-custom-container bg-custom-sky-blue p-8 rounded-xl shadow-sm border border-gray-200"
+          >
+            <h1 class="text-[48px] text-custom-teal-dark font-bold mb-2">
+              Define your problem
+            </h1>
+            <p class="text-custom-teal-dark text[18px] mb-6">
+              And we'll do the rest
+            </p>
+
+            <div class="space-y-4">
+              <input
+                type="text"
+                placeholder="Enter Title"
+                class="w-full p-4 border border-custom-gray rounded-lg focus:ring-2 focus:ring-custom-teal focus:outline-none transition"
+              />
+              <textarea
+                placeholder="Enter text"
+                rows="5"
+                class="w-full p-4 border border-custom-gray rounded-lg focus:ring-2 focus:ring-custom-teal focus:outline-none transition"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Alamat karo Tanggal -->
+          <div
+            class="bg-custom-container bg-custom-sky-blue p-8 mt-6 rounded-xl shadow-sm border border-gray-200"
+          >
+            <div class="grid md:grid-cols-2 gap-8 items-end">
+              <div>
+                <label for="address" class="font-semibold mb-2 block"
+                  >Address</label
+                >
+                <input
+                  type="text"
+                  id="address"
+                  placeholder="Enter text"
+                  class="w-full p-4 border border-custom-gray rounded-lg focus:ring-2 focus:ring-custom-teal focus:outline-none transition"
+                />
+              </div>
+              <div>
+                <label for="date" class="font-semibold mb-2 block">Date</label>
+                <button
+                  id="date"
+                  class="w-full flex justify-between items-center text-left p-4 bg-custom-teal text-white rounded-lg hover:bg-custom-teal-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-teal transition"
+                >
+                  <span>01 - 01 - 2025</span>
+                  <!-- Ikon Panah Bawah (SVG) -->
+                  <img
+                    src="src/img/arrow.svg"
+                    alt="Arrow Down"
+                    width="20"
+                    height="20"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Up Gambar -->
+          <div
+            class="bg-custom-container bg-custom-sky-blue p-8 mt-6 rounded-xl shadow-sm border border-gray-200"
+          >
+            <div
+              class="bg-custom-teal border-2 border-dashed border-teal-300 rounded-xl p-12 text-center"
+            >
+              <div class="flex justify-center mb-4">
+                <!-- icon Upload -->
+                <img
+                  src="src/img/upload.svg"
+                  alt="Upload Icon"
+                  width="48"
+                  height="48"
+                />
+              </div>
+              <p class="text-white text-lg font-semibold">
+                Drag or drop an image
+              </p>
+              <button
+                class="mt-4 bg-white/20 hover:bg-white/30 text-white font-semibold py-2 px-6 rounded-lg transition"
+              >
+                Select file
+              </button>
+            </div>
+          </div>
+
+          <!-- Tombol Buat -->
+          <div class="mt-8">
+            <button
+              class="w-full bg-custom-yellow hover:bg-custom-yellow-dark text-gray-800 font-bold py-4 rounded-lg text-lg transition"
+            >
+              Create
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>
-

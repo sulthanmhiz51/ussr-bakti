@@ -1406,6 +1406,11 @@ video {
   color: #fff !important;
 }
 
+.button.btn-secondary:hover,
+.button.btn-secondary:hover i {
+  color: #fff !important;
+}
+
 header.button:hover {
   color: var(--color-primary-bg) !important;
 }

@@ -73,4 +73,8 @@
   .card-badge {
     @apply absolute flex flex-col xl:flex-row items-start gap-2 top-4 left-4;
   }
+
+  .not-in-view {
+    @apply opacity-0 translate-y-32;
+  }
 }

@@ -1771,6 +1771,15 @@
       }
     }
   }
+
+  .nav-link:hover {
+  color: #fff !important;
+  }
+
+  .nav-link.button {
+  color: #fff !important;
+  }
+
   .btn-secondary {
     background-color: var(--color-secondary);
     color: var(--color-primary-text);

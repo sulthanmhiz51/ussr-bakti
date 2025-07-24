@@ -1461,6 +1461,15 @@
       background-position: bottom -40px right;
     }
   }
+  .\[\&_a\]\:hover\:underline {
+    & a {
+      &:hover {
+        @media (hover: hover) {
+          text-decoration-line: underline;
+        }
+      }
+    }
+  }
   .\[\&_h3\]\:text-2xl {
     & h3 {
       font-size: var(--text-2xl);

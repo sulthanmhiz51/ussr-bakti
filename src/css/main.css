@@ -927,6 +927,13 @@
       flex-direction: row;
     }
   }
+  .nav-link.button {
+    color: #fff !important;
+  }
+
+  .nav-link:hover {
+    color: #fff !important;
+  }
 }
 @property --tw-border-style {
   syntax: "*";

@@ -1388,6 +1388,13 @@ video {
   color: rgb(5 89 91 / var(--tw-text-opacity));
 }
 
+.nav-link.button {
+  color: #fff !important;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+}
 @media (min-width: 640px) {
   .sm\:col-span-6 {
     grid-column: span 6 / span 6;

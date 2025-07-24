@@ -12,15 +12,16 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script
       src="https://kit.fontawesome.com/0615fd1ed1.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container *:transition-all *:duration-2000">
       <!-- Header -->
-      <div class="my-8 flex items-center justify-between">
+      <div id="header" class="my-8 flex items-center justify-between">
         <a href="./index.html"
           ><img src="./src/img/logo2.png" alt="icon" class="w-[142px]"
         /></a>
@@ -34,12 +35,14 @@
         >
       </div>
 
-      <div class="py-[100px] text-center">
-        <p class="text-6xl mb-5 font-bold">
+      <div
+        class="py-8 text-center min-h-[100vh] flex flex-col items-center justify-center"
+      >
+        <p class="text-[72px] leading-none mb-5 font-bold">
           See the problem.<br />Be the
           <span class="text-accent">solution</span>
         </p>
-        <p class="mb-[100px]">
+        <p class="mb-[100px] text-lg">
           Jadilah bagian dari komunitas kemanusiaan yang adil dan beradab.
           <br />
           Tiga persatuan indonesia.
@@ -128,5 +131,32 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              entry.target.classList.add("not-in-view");
+            } else {
+              entry.target.classList.remove("not-in-view");
+            }
+          });
+        },
+        {
+          rootMargin: "0px",
+          threshold: [0, 0.1, 1],
+        }
+      );
+
+      $(document).ready(function () {
+        $("div").each(function () {
+          if (this.id === "header") {
+            return;
+          }
+          observer.observe(this);
+        });
+      });
+    </script>
   </body>
 </html>

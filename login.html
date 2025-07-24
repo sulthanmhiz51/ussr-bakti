@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script
       src="https://kit.fontawesome.com/0615fd1ed1.js"
       crossorigin="anonymous"
@@ -19,8 +20,38 @@
   </head>
   <body>
     <!-- Modal -->
-    <div class="fixed top-0 left-0 w-screen h-screen bg-black/40 hidden">
-      <div class="my-20 mx-auto bg-accent w-1/2 h-64 rounded-2xl"></div>
+    <div
+      id="modal"
+      class="fixed top-0 left-0 w-screen h-screen bg-white/30 backdrop-blur-md transition-opacity duration-200 opacity-0"
+    >
+      <div
+        id="modal-content"
+        class="w-max my-30 mx-auto bg-primary-text rounded-2xl p-12 transition-transform -translate-y-80 duration-500"
+      >
+        <div class="flex gap-4 items-center justify-center mb-10">
+          <div class="flex-1 bg-primary-bg h-1"></div>
+          <div
+            class="flex-none flex gap-2 py-3 px-6 items-center justify-center bg-primary-bg rounded-xl font-semibold"
+          >
+            <img src="./src/img/logo1.png" alt="" class="h-5" />
+            <p>Login as</p>
+          </div>
+          <div class="flex-1 bg-primary-bg h-1"></div>
+        </div>
+        <div
+          class="flex gap-6 *:rounded-xl h-96 *:w-72 *:hover:shadow-md *:shadow-gray-300 *:hover:-translate-y-1 *:cursor-pointer *:text-center *:*:my-6"
+        >
+          <div
+            id="moderator"
+            class="bg-[url(../img/moderator.jpg)] bg-cover text-primary-bg bg-bottom"
+          >
+            <h3>Moderator</h3>
+          </div>
+          <div id="user" class="bg-[url(../img/user.jpg)] bg-cover bg-bottom">
+            <h3>User</h3>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="container">
       <!-- Header -->
@@ -58,42 +89,72 @@
             >
           </div>
           <p class="text-xs font-normal mb-2">Or continue with email address</p>
-          <form action="./dashboard.html" method="post">
-            <div class="grid grid-rows-3 mb-16">
-              <div class="button flex rounded-xl px-4 text-xs font-normal mb-2">
-                <span class="me-3 flex-none"
-                  ><i class="fa-regular fa-envelope"></i></span
-                ><input
-                  type="email"
-                  name=""
-                  id=""
-                  placeholder="Email"
-                  class="flex-1"
-                />
-              </div>
-              <div class="button flex rounded-xl px-4 text-xs font-normal mb-2">
-                <span class="me-3 flex-none"
-                  ><img src="./src/img/lock.svg" alt="" /></span
-                ><input
-                  type="password"
-                  name=""
-                  id=""
-                  placeholder="Password"
-                  class="flex-1"
-                />
-              </div>
-              <a
-                href="./dashboard.html"
-                class="button btn-accent text-sm text-center"
-                >Let's go!</a
-              >
+
+          <div class="grid grid-rows-3 mb-16">
+            <div class="button flex rounded-xl px-4 text-xs font-normal mb-2">
+              <span class="me-3 flex-none"
+                ><i class="fa-regular fa-envelope"></i></span
+              ><input
+                type="email"
+                name=""
+                id=""
+                placeholder="Email"
+                class="flex-1"
+              />
             </div>
-          </form>
+            <div class="button flex rounded-xl px-4 text-xs font-normal mb-2">
+              <span class="me-3 flex-none"
+                ><img src="./src/img/lock.svg" alt="" /></span
+              ><input
+                type="password"
+                name=""
+                id=""
+                placeholder="Password"
+                class="flex-1"
+              />
+            </div>
+            <button
+              id="login-btn"
+              class="button btn-accent text-sm text-center cursor-pointer moderator user"
+            >
+              Let's go!
+            </button>
+          </div>
+
           <p class="text-xs font-normal">
             Don't have an account? <strong><a href="">Sign Up</a></strong>
           </p>
         </div>
       </div>
     </div>
+    <script>
+      $(document).ready(function () {
+        $("#moderator").on("click", function () {
+          $("#login-btn").removeClass("user");
+        });
+        $("#user").on("click", function () {
+          $("#login-btn").removeClass("moderator");
+        });
+
+        $("#login-btn").on("click", function () {
+          if ($(this).hasClass("moderator")) {
+            window.location.href = "./moderator.html";
+          }
+          if ($(this).hasClass("user")) {
+            window.location.href = "./dashboard.html";
+          }
+        });
+
+        $("#modal").removeClass("opacity-0");
+        $("#modal-content").removeClass("-translate-y-80");
+
+        $("#modal-content").on("click", ".bg-cover", function () {
+          $("#modal").addClass("opacity-0");
+          setTimeout(() => {
+            $("#modal").addClass("hidden");
+          }, 200);
+        });
+      });
+    </script>
   </body>
 </html>

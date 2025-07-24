@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id" class="bg-primary-bg text-primary-text font-poppins font-medium">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bakti | Dasbor Moderator</title>
+    <link rel="icon" href="./src/img/favicon.png" />
+    <!-- Ganti dengan path ke file CSS hasil build Anda -->
+    <link href="./src/css/mod.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/0615fd1ed1.js" crossorigin="anonymous"></script>
+    <style>
+        /* Menambahkan smooth scroll untuk navigasi anchor */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header Moderator -->
+        <header class="my-8 flex items-center justify-between sticky top-0 bg-primary-bg/80 backdrop-blur-md z-10 py-4">
+            <a href="./moderator.html">
+                <img src="./src/img/logo2.png" alt="Logo Bakti" class="w-[142px]" />
+            </a>
+            <nav>
+                <ul class="flex gap-1 sm:gap-2 font-semibold">
+                    <li><a href="#overview" class="nav-link button">Overview</a></li>
+                    <li><a href="#reports" class="nav-link">Pending</a></li>
+                    <li><a href="#active-reports" class="nav-link">Aktif</a></li>
+                    <li><a href="#completed-tasks" class="nav-link">Selesai</a></li>
+                    <li><a href="#users" class="nav-link">Pengguna</a></li>
+                </ul>
+            </nav>
+            <div class="w-80 flex items-center gap-6">
+                <div class="flex-auto flex items-center gap-2 py-2 px-3 bg-secondary rounded-xl">
+                    <img src="./src/img/moderator.jpg" alt="Avatar Moderator" class="h-10 w-10 object-cover flex-none rounded-full" />
+                    <div class="flex-auto">
+                        <p class="font-semibold">Moderator</p>
+                        <p class="text-xs font-normal">Admin Panel</p>
+                    </div>
+                </div>
+                <a href="./index.html" class="flex-none bg-[#C52222] hover:bg-red-700 transition-colors p-2 rounded-md text-primary-bg flex items-center justify-center">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <!-- Bagian 1: Ringkasan & Statistik -->
+            <section id="overview" class="pt-20 -mt-12">
+                <h2 class="text-3xl font-bold mb-6">Site Overview</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="stat-card"><p class="stat-number">2</p><p class="stat-label">Laporan Menunggu</p></div>
+                    <div class="stat-card"><p class="stat-number">4</p><p class="stat-label">Laporan Aktif</p></div>
+                    <div class="stat-card"><p class="stat-number">6</p><p class="stat-label">Tugas Selesai</p></div>
+                    <div class="stat-card"><p class="stat-number">420</p><p class="stat-label">Pengguna Terdaftar</p></div>
+                </div>
+            </section>
+
+            <!-- Bagian 2: Laporan yang Membutuhkan Persetujuan -->
+            <section id="reports" class="pt-24 -mt-12">
+                <h2 class="text-3xl font-bold mb-6">Laporan Menunggu Persetujuan (2)</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div class="report-card">
+                        <img src="./src/img/donasi-warga.jpg" alt="Gambar donasi warga" class="report-card-img" />
+                        <div class="flex flex-col flex-grow p-4">
+                            <h3 class="font-semibold text-lg">Butuh donasi untuk warga</h3>
+                            <p class="text-xs font-normal text-primary-text/80 mb-2">Jl. York baru, kecamatan Santos</p>
+                            <p class="text-sm mb-3 flex-grow">"Warga membutuhkan bantuan sembako dan pakaian layak pakai."</p>
+                            <p class="text-xs font-semibold">Dilaporkan oleh: <a href="#" class="underline hover:text-primary">rahmatgalon</a></p>
+                        </div>
+                        <div class="flex justify-end items-center gap-2 p-4 border-t border-primary-bg">
+                            <button class="btn-reject">Tolak</button>
+                            <button class="btn-approve">Setujui</button>
+                        </div>
+                    </div>
+                    <div class="report-card">
+                        <img src="./src/img/ayam.jpg" alt="Gambar kampanye ayam" class="report-card-img" />
+                        <div class="flex flex-col flex-grow p-4">
+                            <h3 class="font-semibold text-lg">Kampanye penyelamatan ayam</h3>
+                            <p class="text-xs font-normal text-primary-text/80 mb-2">Jl. Ayam Ternate, Mergangsang</p>
+                            <p class="text-sm mb-3 flex-grow">"Ayam-ayam di sekitar sini butuh perhatian lebih, mari kita buat kampanye."</p>
+                            <p class="text-xs font-semibold">Dilaporkan oleh: <a href="#" class="underline hover:text-primary">Seseorang</a></p>
+                        </div>
+                        <div class="flex justify-end items-center gap-2 p-4 border-t border-primary-bg">
+                            <button class="btn-reject">Tolak</button>
+                            <button class="btn-approve">Setujui</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Bagian 3: Laporan Aktif -->
+            <section id="active-reports" class="pt-24 -mt-12">
+                <h2 class="text-3xl font-bold mb-6">Laporan Aktif (4)</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  <div class="card group"><div class="card-badge"><span class="badge-accent">27 Sep 2025</span><span class="badge-accent"><i class="fa-solid fa-location-dot mr-1"></i>3m</span></div><img src="./src/img/kenakalan.jpg" alt="Gambar memberantas kenakalan" class="card-img mb-2" /><div class="p-2"><p>Memberantas kenakalan</p><p class="text-xs font-normal mb-2">Jl. Gili manuk tuan hambali</p><div class="progress-bar-bg"><div class="progress-bar w-[30%]"></div></div><p class="badge-accent self-start mt-2">Dalam perencanaan</p></div></div>
+                  <div class="card group"><div class="card-badge"><span class="badge-accent">19 Jul 2025</span><span class="badge-accent"><i class="fa-solid fa-location-dot mr-1"></i>19m</span></div><img src="./src/img/perbaikan.jpg" alt="Gambar perbaikan jalan" class="card-img mb-2" /><div class="p-2"><p>Perbaikan jalan</p><p class="text-xs font-normal mb-2">Jl. Sukarno hatta no.1023</p><div class="progress-bar-bg"><div class="progress-bar w-[80%]"></div></div><p class="badge-accent self-start mt-2">Dalam pelaksanaan</p></div></div>
+                </div>
+            </section>
+
+            <!-- Bagian 4: Tugas Selesai -->
+            <section id="completed-tasks" class="pt-24 -mt-12">
+                <h2 class="text-3xl font-bold mb-6">Tugas Selesai & Berakhir (6)</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  <div class="card"><div class="card-badge"><span class="badge-completed">Completed</span></div><img src="./src/img/plang.jpg" alt="Gambar renovasi plang" class="card-img mb-2" /><div class="p-2"><p>Renovasi plang jalan</p><p class="text-xs font-normal">Jl. Monjali, Yogyakarta</p></div></div>
+                  <div class="card"><div class="card-badge"><span class="badge-canceled">Canceled</span></div><img src="./src/img/koluseum.jpg" alt="Gambar Colloseum" class="card-img mb-2" /><div class="p-2"><p>Colloseum Happy Day</p><p class="text-xs font-normal">Jl. Kolosium no. 4 Paratag Kulon</p></div></div>
+                </div>
+            </section>
+
+            <!-- Bagian 5: Manajemen Pengguna -->
+            <section id="users" class="pt-24 -mt-12 mb-12">
+                <h2 class="text-3xl font-bold mb-6">Manajemen Pengguna</h2>
+                <div class="bg-secondary p-4 sm:p-6 rounded-2xl shadow-md">
+                    <div class="flex flex-col gap-4">
+                        <div class="hidden md:grid grid-cols-12 gap-4 items-center px-4 font-bold"><p class="col-span-1">#</p><p class="col-span-5">Pengguna</p><p class="col-span-2">Poin</p><p class="col-span-4 text-right">Aksi</p></div>
+                        <div class="user-row"><span class="font-bold text-lg md:col-span-1">#1</span><div class="flex items-center gap-4 md:col-span-5"><img src="./src/img/baldwin.jpg" alt="Avatar King Baldwin IV" class="w-12 h-12 object-cover rounded-full"><div><p class="font-bold text-lg">King Baldwin IV</p><p class="text-sm text-primary-text/80">Yogyakarta</p></div></div><p class="font-semibold text-lg md:col-span-2">2500 pts</p><div class="flex justify-start md:justify-end gap-2 md:col-span-4"><button class="btn-view">Lihat Profil</button><button class="btn-suspend">Tangguhkan</button></div></div>
+                        <div class="user-row"><span class="font-bold text-lg md:col-span-1">#2</span><div class="flex items-center gap-4 md:col-span-5"><img src="./src/img/perry.jpg" alt="Avatar USSR22" class="w-12 h-12 object-cover rounded-full"><div><p class="font-bold text-lg">USSR22</p><p class="text-sm text-primary-text/80">Los Santos</p></div></div><p class="font-semibold text-lg md:col-span-2">1500 pts</p><div class="flex justify-start md:justify-end gap-2 md:col-span-4"><button class="btn-view">Lihat Profil</button><button class="btn-suspend">Tangguhkan</button></div></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+

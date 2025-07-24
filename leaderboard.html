@@ -6,7 +6,6 @@
     <title>Bakti - Monthly Prize</title>
 
     <link href="./src/css/leaderboard.css" rel="stylesheet">
-
     <link href="./src/css/main.css" rel="stylesheet" />
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,28 +22,30 @@
 
     <div class="container">
 
-        <header class="my-8 flex items-center justify-between">
-            <a href="./dashboard.html">
-                <img src="./src/img/logo2.png" alt="icon" class="w-[142px]" />
-            </a>
-            <ul class="flex gap-4 font-semibold">
-                <li><a href="#" class="nav-link button">Home</a></li>
-                <li><a href="./explore.html" class="nav-link">Explore</a></li>
-                <li><a href="./about.html" class="nav-link">About</a></li>
-            </ul>
-            <div class="w-80 flex items-center gap-6">
-                <div class="flex-auto flex items-center gap-2 py-2 px-3 bg-secondary rounded-xl">
-                    <img src=".\src\img\perry.jpg" alt="User Avatar" class="h-10 w-10 object-cover flex-none rounded-[50%]" />
-                    <div class="flex-auto">
-                        <p>USSR22</p>
-                    </div>
-                    <p class="font-normal text-xs flex-none">Points: 1500</p>
-                </div>
-                <a href="./index.html" class="flex-none bg-[#C52222] px-2 py-1 rounded-sm text-primary-bg">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Bagian Navigasi -->
+            <header class="my-8 flex items-center justify-between">
+                <a href="./dashboard.html">
+                    <img src="./src/img/logo2.png" alt="icon" class="w-[142px]" />
                 </a>
-            </div>
-        </header>
+                <ul class="flex gap-4 font-semibold">
+                    <li><a href="./dashboard.html" class="nav-link">Home</a></li>
+                    <li><a href="./explore.html" class="nav-link">Explore</a></li>
+                    <li><a href="./about.html" class="nav-link">About</a></li>
+                </ul>
+                <div class="w-80 flex items-center gap-6">
+                    <a href="./profile.html" class="flex-auto flex items-center gap-2 py-2 px-3 bg-secondary rounded-xl">
+                        <img src="./src/img/perry.jpg" alt="User Avatar" class="h-10 w-10 object-cover flex-none rounded-[50%]" />
+                        <div class="flex-auto">
+                            <p>USSR22</p>
+                        </div>
+                        <p class="font-normal text-xs flex-none">Points: 1500</p>
+                    </a>
+                    <a href="./index.html" class="flex-none bg-[#C52222] px-2 py-1 rounded-sm text-primary-bg flex items-center justify-center" style="width:34px; height:34px;">
+                        <img src="./src/img/logout.svg" alt="Logout" style="width:18px; height:18px;" />
+                    </a>
+                </div>
+            </header>
 
         <main class="py-12 max-w-4xl mx-auto">
             <section class="min-h-[256px] bg-secondary p-8 rounded-2xl shadow-md relative mb-10 flex flex-col justify-center gap-[10px] bg-[url('\src\img\medal.jpg')] bg-cover bg-center">

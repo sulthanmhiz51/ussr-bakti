@@ -1771,6 +1771,15 @@
       }
     }
   }
+
+  .nav-link:hover {
+  color: #fff !important;
+  }
+
+  .nav-link.button {
+  color: #fff !important;
+  }
+
   .btn-secondary {
     background-color: var(--color-secondary);
     color: var(--color-primary-text);
@@ -1875,6 +1884,13 @@
     @media (width >= 80rem) {
       flex-direction: row;
     }
+  }
+  .nav-link.button {
+    color: #fff !important;
+  }
+
+  .nav-link:hover {
+    color: #fff !important;
   }
 }
 @property --tw-translate-x {
